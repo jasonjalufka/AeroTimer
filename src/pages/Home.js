@@ -42,7 +42,7 @@ const RecipeListItem = styled.li`
   color: ${theme.colors.white};
 `;
 
-const Home = () => {
+const Home = props => {
   return (
     <div>
       <HeroSection>
@@ -56,12 +56,9 @@ const Home = () => {
             return (
               <RecipeListItem key={i} method={recipeData[recipe].method}>
                 <Link
-                  to={{
-                    pathname: '/recipe/',
-                    state: {
-                      data: recipeData[recipe]
-                    }
-                  }}
+                  style={{ color: 'white' }}
+                  onClick={() => props.setRecipe(props.allRecipes[recipe].name)}
+                  to='/recipe/'
                 >
                   {recipeData[recipe].name}
                 </Link>
