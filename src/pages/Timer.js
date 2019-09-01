@@ -72,7 +72,7 @@ const RemainingStepsListItem = styled.li`
 const Timer = props => {
   let { totalTime, steps } = props.location.state.data;
 
-  const [remainingTime, setRemainingTime] = useState(3);
+  const [remainingTime, setRemainingTime] = useState(totalTime);
   const [currentStepTime, setCurrentStepTime] = useState(steps[1].duration);
   const [currentStep, setCurrentStep] = useState(1);
   const [isTimerDone, setIsTimerDone] = useState(false);
