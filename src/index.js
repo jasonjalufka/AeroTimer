@@ -1,7 +1,7 @@
 import WebFont from 'webfontloader';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import configureHistory from './utils/configureHistory';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -21,9 +21,9 @@ ReactDOM.render(
   <ThemeProvider theme={theme}>
     <main id='main'>
       <GlobalStyle />
-      <Router history={history}>
+      <HashRouter history={history}>
         <App />
-      </Router>
+      </HashRouter>
     </main>
   </ThemeProvider>,
   document.getElementById('root')

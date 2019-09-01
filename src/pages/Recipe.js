@@ -98,8 +98,7 @@ const Recipe = props => {
     temperature,
     totalTime,
     steps
-  } = props.location.state.data;
-  console.log('STEPS', steps);
+  } = props.selectedRecipe;
   return (
     <div>
       <IngredientSection>
@@ -144,14 +143,7 @@ const Recipe = props => {
               </StepsListItem>
             ))}
           </StepsList>
-          <Link
-            to={{
-              pathname: '/timer/',
-              state: {
-                data: props.location.state.data
-              }
-            }}
-          >
+          <Link to='/timer/'>
             <BrewButton>Let's Brew!</BrewButton>
           </Link>
         </StepsContainer>
