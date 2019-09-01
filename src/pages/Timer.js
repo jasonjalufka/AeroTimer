@@ -1,7 +1,6 @@
 import React, { useCallback, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Section, theme } from '../styles';
-import { IconLogo } from '../components/icons';
 import { Redirect } from 'react-router-dom';
 
 const TimerContainer = styled.section`
@@ -70,9 +69,9 @@ const RemainingStepsListItem = styled.li`
 `;
 
 const Timer = props => {
-  let { totalTime, steps } = props.location.state.data;
+  let { totalTime, steps } = props.selectedRecipe;
 
-  const [remainingTime, setRemainingTime] = useState(3);
+  const [remainingTime, setRemainingTime] = useState(totalTime);
   const [currentStepTime, setCurrentStepTime] = useState(steps[1].duration);
   const [currentStep, setCurrentStep] = useState(1);
   const [isTimerDone, setIsTimerDone] = useState(false);
@@ -86,7 +85,6 @@ const Timer = props => {
     for (let i = currentStep + 1; i <= getStepsLength(); i++) {
       stepsArr.push(steps[i].type);
     }
-    console.log(stepsArr);
     return stepsArr;
   };
 

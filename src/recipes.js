@@ -34,15 +34,15 @@ const recipeData = {
   abby: {
     name: 'abby',
     method: 'inverted',
-    coffeeVolume: 15,
-    grindSize: 'medium fine',
-    waterVolume: 200,
+    coffeeVolume: 18,
+    grindSize: 'medium',
+    waterVolume: 220,
     temperature: 200,
-    totalTime: 95,
+    totalTime: 90,
     steps: {
       1: {
         type: 'pour',
-        amount: 200,
+        amount: 220,
         duration: 10
       },
       2: {
@@ -51,7 +51,7 @@ const recipeData = {
       },
       3: {
         type: 'steep',
-        duration: 30
+        duration: 25
       },
       4: {
         type: 'flip',
