@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/AeroTimer/precache-manifest.540c818ad5f4e64a35bb0b4ef40bcad8.js"
+  "/AeroTimer/precache-manifest.3ab90866653abd1c7b78131336589b76.js"
 );
 
 self.addEventListener('message', (event) => {
