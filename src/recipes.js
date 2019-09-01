@@ -51,7 +51,6 @@ const recipeData = {
       },
       3: {
         type: 'steep',
-        duration: 25
       },
       4: {
         type: 'flip',
