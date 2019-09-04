@@ -51,7 +51,6 @@ const recipeData = {
       },
       3: {
         type: 'steep',
-<<<<<<< HEAD
         duration: 90
       },
       4: {
@@ -91,8 +90,6 @@ const recipeData = {
         type: 'pour',
         amount: 70,
         duration: 10
-=======
->>>>>>> c52ceb3d6d04b1e73146d95807a442d8c3573f09
       },
       4: {
         type: 'steep',
