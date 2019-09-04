@@ -69,6 +69,7 @@ const StepsContainer = styled.div`
 const StepsList = styled.ul``;
 
 const StepsListItem = styled.li`
+  display: flex;
   margin: 5px 0px;
   padding: 10px 20px;
   color: ${theme.colors.white};
@@ -137,9 +138,19 @@ const Recipe = props => {
           <StepsList>
             {Object.keys(steps).map((step, i) => (
               <StepsListItem key={i}>
-                {steps[step].type}
-                {steps[step].amount ? `/ ${steps[step].amount}` : ''} -{' '}
-                {steps[step].duration}
+                <div style={{ flexGrow: '1' }}>
+                  {steps[step].type}
+                  {steps[step].amount ? `/ ${steps[step].amount}g` : ''}
+                </div>
+                <div
+                  style={{
+                    flexGrow: '1',
+                    textAlign: 'right',
+                    fontWeight: '700'
+                  }}
+                >
+                  {steps[step].duration}
+                </div>
               </StepsListItem>
             ))}
           </StepsList>
