@@ -31,6 +31,38 @@ const recipeData = {
       }
     }
   },
+  "The Charger": {
+    name: "The Charger",
+    method: "traditional",
+    coffeeVolume: 17,
+    grindSize: "medium fine",
+    waterVolume: 250,
+    temperature: 200,
+    totalTime: 120,
+    steps: {
+      1: {
+        type: "pour",
+        amount: 250,
+        duration: 10,
+      },
+      2: {
+        type: "stir",
+        duration: 10,
+      },
+      3: {
+        type: "steep",
+        duration: 70,
+      },
+      4: {
+        type: "stir",
+        duration: 10,
+      },
+      5: {
+        type: "plunge",
+        duration: 20,
+      },
+    },
+  },
   tonx: {
     name: 'tonx',
     method: 'inverted',
