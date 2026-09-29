@@ -1,0 +1,49 @@
+.title { text-align: center; text-transform: capitalize; padding: 0 16px; }
+.ingredients {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px 20px;
+  max-width: 360px;
+  padding: 0 10px;
+  margin: 10px auto 24px;
+}
+.ingredient { display: flex; flex-direction: column; text-align: center; }
+.ingredient dt { font-size: 16px; font-weight: 300; margin-top: 8px; }
+.ingredient dd {
+  order: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  padding: 6px;
+  margin: 0;
+  font-weight: 500;
+  font-size: clamp(1rem, 4.5vw, 1.25rem);
+  overflow-wrap: anywhere;
+  border-radius: 5px;
+  color: var(--black);
+  background: var(--blue);
+}
+.steps { margin: 0 20px; }
+.steps h2 { font-size: 1.953rem; margin: 0 0 5px; }
+.step {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 5px 0;
+  padding: 10px 20px;
+  color: var(--white);
+  background: var(--dark-gray);
+  border-radius: var(--radius);
+}
+.brew {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 1.953rem;
+  font-weight: 700;
+  color: var(--black);
+  background: var(--green);
+  border-radius: 10px;
+}

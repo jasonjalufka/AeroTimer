@@ -1,0 +1,16 @@
+.notice {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  max-width: min(360px, calc(100vw - 32px));
+  padding: 16px;
+  border: 1px solid var(--light-gray);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgb(0 0 0 / 15%);
+  background: var(--white);
+  color: var(--black);
+  z-index: 10;
+  font-size: 0.9rem;
+}
+.actions { display: flex; gap: 12px; }
+.actions button { padding: 10px 16px; border-radius: 4px; background: var(--blue); color: var(--black); }

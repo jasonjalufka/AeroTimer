@@ -1,0 +1,47 @@
+.scene {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.water {
+  position: absolute;
+  inset: 0;
+  background: #234957;
+  transition: transform 100ms linear;
+  will-change: transform;
+}
+
+.waveFront, .waveBack {
+  position: absolute;
+  top: -39px;
+  left: 0;
+  width: 200%;
+  height: 40px;
+  fill: #234957;
+  animation: drift 6s linear infinite;
+}
+
+.waveBack {
+  top: -45px;
+  fill: #74b9ff;
+  opacity: 0.15;
+  animation-duration: 9s;
+  animation-direction: reverse;
+}
+
+.scene[data-running='false'] .water { transition: none; }
+.scene[data-running='false'] svg { animation-play-state: paused; }
+
+@keyframes drift {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scene { display: none; }
+  .water { transition: none; }
+  .waveFront, .waveBack { animation: none; }
+}

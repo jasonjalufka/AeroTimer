@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'Rubik Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300 900;
+  src: url('@fontsource-variable/rubik/files/rubik-latin-wght-normal.woff2') format('woff2');
+}
+
+:root {
+  font-family: 'Rubik Variable', 'Rubik', sans-serif;
+  color: #2d3436;
+  background: #fff;
+  font-synthesis: none;
+  --white: #fff;
+  --black: #2d3436;
+  --blue: #74b9ff;
+  --green: #00b894;
+  --dark-yellow: #fdcb6e;
+  --dark-gray: #636e72;
+  --light-gray: #b2bec3;
+  --radius: 2px;
+}
+
+* { box-sizing: border-box; }
+html { font-size: 18px; }
+body { margin: 0; min-width: 280px; -webkit-font-smoothing: antialiased; }
+#root { min-height: 100vh; }
+h1 { font-size: clamp(2.2rem, 9vw, 3.052rem); margin: 0 0 10px; }
+h2 { font-size: 2.441rem; }
+p { margin: 0 0 15px; }
+a { color: inherit; text-decoration: none; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; font: inherit; border: 0; }
+button, a { touch-action: manipulation; }
+:focus-visible { outline: 3px solid #854d00; outline-offset: 4px; }
+ul, ol { padding: 0; margin: 0; list-style: none; }
+img { max-width: 100%; }
+.page { padding: 0 0 28px; }
+.backLink { display: inline-block; margin: 16px 20px; text-decoration: underline; min-height: 28px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  button, a { transition: filter 150ms ease; }
+  button:hover, a:hover { filter: brightness(0.94); }
+}
